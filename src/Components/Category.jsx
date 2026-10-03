@@ -27,7 +27,7 @@ const Category = ({ className = "" }) => {
   };
 
   return (
-    <div className={`category-strip ${className}`}>
+    <div className={`category-strip glass-category ${className}`}>
       <Wrapper>
         <div className="flex w-full justify-center py-4">
           <div className="category-scroller">

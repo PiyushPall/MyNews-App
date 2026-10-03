@@ -23,10 +23,10 @@ const Navbar = ({ className = "", theme, setTheme }) => {
 
   return (
     <>
-      <nav className={`glass-panel sticky top-0 z-50 w-full ${className}`}>
+      <nav className={`glass-panel sticky top-0 z-50 w-full glass-navbar ${className}`}>
         <Wrapper>
           <div className="flex h-20 items-center justify-between gap-4">
-            <div className="flex min-w-[150px] items-center">
+            <div className="flex min-w-37.5 items-center">
               <a href="/" className="brand-mark">
                 MN
               </a>
