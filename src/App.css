@@ -673,17 +673,17 @@
   }
 }
 .glass-navbar {
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(48px);
+  -webkit-backdrop-filter: blur(48px);
 }
 
 .dark .glass-navbar {
-  background: rgba(15, 23, 42, 0.55);
+  background: rgba(15, 23, 42, 0.80);
 }
 
 .glass-category {
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(48px);
+  -webkit-backdrop-filter: blur(48px);
 }
