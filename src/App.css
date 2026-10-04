@@ -674,8 +674,8 @@
 }
 .glass-navbar {
   background: rgba(255, 255, 255, 0.80);
-  backdrop-filter: blur(48px);
-  -webkit-backdrop-filter: blur(48px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 .dark .glass-navbar {
@@ -684,6 +684,6 @@
 
 .glass-category {
   background: rgba(255, 255, 255, 0.80);
-  backdrop-filter: blur(48px);
-  -webkit-backdrop-filter: blur(48px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }

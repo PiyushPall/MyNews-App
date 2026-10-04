@@ -18,42 +18,76 @@ const fallbackTitles = {
     "New climate forecast highlights uneven recovery across major cities",
     "A new generation of creators is rewriting the rules of digital media",
     "Urban transit projects gain momentum amid rising commuter demand",
+    "Cities invest in smarter infrastructure to improve everyday life",
+    "Digital platforms continue to transform how people share information",
+    "Communities explore new ideas to build a more connected future",
+    "Technology and innovation shape the next generation of services",
   ],
+
   business: [
     "Investors rotate toward resilient sectors as earnings season intensifies",
     "Startups focus on practical AI tools that improve productivity",
     "Retail leaders rethink supply chains to reduce disruption",
     "Leadership teams prioritize long-term planning over short-term noise",
+    "Companies increase investment in digital transformation strategies",
+    "Small businesses adopt new tools to improve customer experiences",
+    "Global brands explore new markets as consumer demand changes",
+    "Business leaders focus on sustainable growth and innovation",
   ],
+
   entertainment: [
     "Streaming platforms race to build more personal viewing experiences",
     "Live events return with new formats designed for broader audiences",
     "Creators are reshaping entertainment with faster, sharper storytelling",
     "Music and film culture remain deeply connected to community identity",
+    "New entertainment formats are changing how audiences consume content",
+    "Independent creators continue to gain influence across digital platforms",
+    "Film studios experiment with fresh storytelling experiences",
+    "Music platforms introduce new ways for artists to reach audiences",
   ],
+
   health: [
     "Wellness brands expand around preventative care and daily routines",
     "Medical teams lean on data-driven programs to improve outcomes",
     "Public health organizations push more practical community guidance",
     "Healthy habits remain a central focus across modern work culture",
+    "Researchers explore new approaches to improving everyday wellness",
+    "Healthcare technology continues to improve patient experiences",
+    "Experts highlight the importance of balanced daily routines",
+    "Digital health platforms make information easier to access",
   ],
+
   science: [
     "Researchers explore faster, safer ways to model climate patterns",
     "New lab studies reveal promising advances in clean-energy materials",
     "Scientists refine how we track biodiversity across fragile ecosystems",
     "Breakthrough experiments continue to reshape what is possible in data analysis",
+    "Researchers investigate new methods for understanding complex systems",
+    "Scientists develop innovative tools for studying the natural world",
+    "New discoveries offer fresh insights into environmental changes",
+    "Research teams explore technologies that could shape future industries",
   ],
+
   sports: [
     "Teams adapt training strategy to balance performance with recovery",
     "New competition formats are creating a fresh wave of fan excitement",
     "Athletes continue to push the boundaries of endurance and discipline",
     "Modern sports culture is combining analytics, storytelling, and fan access",
+    "Teams use advanced analytics to improve performance and strategy",
+    "Young athletes gain attention through impressive competitive performances",
+    "Training technology continues to change modern sports preparation",
+    "Fans embrace new ways to follow their favorite teams and athletes",
   ],
+
   technology: [
     "Developers are prioritizing AI features that feel practical, not flashy",
     "Product teams focus on speed, trust, and clearer user experiences",
     "The next wave of software is shaped by better automation and integration",
     "Computing trends continue to favor thoughtful design over complexity",
+    "Developers explore new tools to build faster and smarter applications",
+    "AI continues to reshape workflows across the technology industry",
+    "Web platforms focus on performance, accessibility, and better experiences",
+    "Cloud technologies make modern applications easier to scale",
   ],
 };
 
@@ -64,7 +98,8 @@ const getFallbackNews = (url = "/everything?q=india") => {
 
   return baseTitles.map((title, index) => ({
     title,
-    description: "Fresh reporting on the stories shaping today's conversations, explored with context and clarity.",
+    description:
+      "Fresh reporting on the stories shaping today's conversations, explored with context and clarity.",
     url: `https://example.com/${category}-${index + 1}`,
     urlToImage: fallbackImages[index % fallbackImages.length],
     source: { name: "Morning Brief" },
@@ -79,7 +114,9 @@ const Newscontextprovider = ({ children }) => {
     setLoading(true);
 
     try {
-      const response = await api.get(`${url}&apiKey=${import.meta.env.VITE_API_KEY}`);
+      const response = await api.get(
+        `${url}&apiKey=${import.meta.env.VITE_API_KEY}`,
+      );
       const articles = response?.data?.articles || [];
 
       if (!articles.length) {
@@ -88,7 +125,10 @@ const Newscontextprovider = ({ children }) => {
 
       return response.data;
     } catch (error) {
-      console.warn("News API request failed. Using fallback data instead.", error);
+      console.warn(
+        "News API request failed. Using fallback data instead.",
+        error,
+      );
       const fallbackArticles = getFallbackNews(url);
       return { articles: fallbackArticles };
     } finally {
