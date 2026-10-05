@@ -14,7 +14,7 @@ A modern, responsive news aggregation application built with React, Vite, Tailwi
 
 <br />
 
-[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-VIEW_LIVE_PROJECT-6366F1?style=for-the-badge)](YOUR_LIVE_DEMO_URL)
+[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-VIEW_LIVE_PROJECT-6366F1?style=for-the-badge)](https://my-news-app-tau-tan.vercel.app/)
 
 </div>
 
@@ -22,7 +22,7 @@ A modern, responsive news aggregation application built with React, Vite, Tailwi
 
 ## 🚀 Live Demo
 
-👉 **Experience it here:** 🔗 [View Live Project](YOUR_LIVE_DEMO_URL)
+👉 **Experience it here:** 🔗 [View Live Project](https://my-news-app-tau-tan.vercel.app/)
 
 ---
 
