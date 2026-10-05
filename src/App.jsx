@@ -11,7 +11,6 @@ const App = () => {
   return (
     <div className={`app-shell theme-${theme}`}>
       <Navbar
-        className="sticky top-0 z-20"
         theme={theme}
         setTheme={setTheme}
       />
