@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Wrapper from "./Wrapper";
 import { useNewscontext } from "../Context/NewsContext";
@@ -29,8 +28,8 @@ const Category = ({ className = "" }) => {
   return (
     <div className={`category-strip ${className}`}>
       <Wrapper>
-        <div className="flex w-full justify-center py-4">
-          <div className="category-scroller">
+        <div className="flex w-full justify-center py-3 sm:py-4">
+          <div className="category-scroller w-full">
             {categories.map((category) => (
               <button
                 key={category}
@@ -38,7 +37,9 @@ const Category = ({ className = "" }) => {
                 value={category}
                 onClick={handleClick}
                 aria-pressed={activeCategory === category}
-                className={`news-chip ${activeCategory === category ? "is-active" : ""}`}
+                className={`news-chip shrink-0 ${
+                  activeCategory === category ? "is-active" : ""
+                }`}
               >
                 {category}
               </button>
@@ -51,4 +52,3 @@ const Category = ({ className = "" }) => {
 };
 
 export default Category;
-
